@@ -6,7 +6,7 @@ import Cart from '../cart/cart';
 const News = () => {
     const [items, setItem] = useState([]);
     useEffect(() => {
-        fetch('../../../public/pacage.json')
+        fetch('../../../public/package.json')
             .then(res => res.json())
             .then(data => setItem(data))
     }, [])
