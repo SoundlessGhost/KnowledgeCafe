@@ -1,0 +1,7 @@
+.mainContainer{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+.newsContainer{
+    margin: 20px auto;
+}

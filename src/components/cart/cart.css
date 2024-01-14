@@ -1,0 +1,36 @@
+.cartContainer{
+    position: sticky;
+    top: 0px;
+    width: 411px;
+    margin-top: 20px;
+    border-radius:4px ;
+    margin-right: 10px;
+}
+.cartTittle{
+    text-align: center;
+    margin-top: 50px;
+    font-style: italic;
+    font-weight: bold;  
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(167, 166, 166);
+    padding: 20px 0;
+    border-radius: 10px;
+}
+.cartSubTittle{
+    height: 750px;
+    border-radius: 10px;
+    background-color: rgb(145, 144, 144);
+}
+.bookmark{
+    padding-top: 20px;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+}
+.UserAbout{
+    margin-left: 30px;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}

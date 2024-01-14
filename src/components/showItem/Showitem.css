@@ -1,0 +1,60 @@
+.itemContainer {
+    height: 782px;
+    width: 845px;
+    padding: 4px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.itemContainer img {
+    width: 845px;
+    height: 600px;
+    border-radius: 4px;
+}
+
+.userContainer {
+    display: flex;
+    align-items: center;
+}
+
+.userContainer img {
+    height: 40px;
+    width: 40px;
+}
+
+.userName {
+    margin-left: 10px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+}
+
+.userButton {
+    margin-left: 540px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}
+
+.userAbout {
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin: 0;
+}
+
+.tag {
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    color: gray;
+    margin: 0px;
+}
+.tag1{
+    margin-top: 0px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    color: gray;
+}

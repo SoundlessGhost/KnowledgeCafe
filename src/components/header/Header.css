@@ -1,0 +1,29 @@
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1C2B35;
+    color: white;
+    /* width: 100%; */
+}
+.headerTittle{
+    margin-left:40px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+.headerSubTittle{
+    margin-right:40px;
+    display: flex;
+    align-items: center;
+}
+.headerSubTittle a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: 50px;
+}
+.headerSubTittle img{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
