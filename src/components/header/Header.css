@@ -3,15 +3,18 @@
     justify-content: space-between;
     background-color: #1C2B35;
     color: white;
-    /* width: 100%; */
 }
 .headerTittle{
     margin-left:40px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+}
+.headerTittle h3 {
+    margin-left:5px ;
 }
 .headerSubTittle{
-    margin-right:40px;
     display: flex;
     align-items: center;
 }
@@ -22,8 +25,34 @@
     font-family: 'Courier New', Courier, monospace;
     margin-right: 50px;
 }
-.headerSubTittle img{
+.headerTittle img{
     height: 45px;
     width: 45px;
     border-radius: 50%;
+    cursor: pointer;
 }
+.popupContainer{
+    border: 1px solid #555;
+    height: 220px;
+    width: 200px;
+    position: absolute;
+    top: 65px;
+    left: 20px;
+    padding: 10px;
+    border-radius:10px ;
+    background-color: rgb(67, 65, 65);
+}
+.popupContainer p{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+.popupContainer p:hover{
+    color: orange;
+ }
+ #light{
+    color:white;
+ }
+ #dark{
+    color:black;
+ }
