@@ -1,18 +1,18 @@
 /* eslint-disable react/prop-types */
 // import React from 'react';
 import './Showitem.css'
-import BOY from '../../images/Art.png'
+// import BOY from '../../images/Art.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 const Showitem = (props) => {
-    const { picture, name, about, time, tag, release, site } = props.item;
+    const { picture, name, about, time, tag, release, site ,user} = props.item;
     const clickHandler = props.clickHandler
     return (
         <div>
             <div className='itemContainer'>
                 <img src={picture} alt="" />
                 <div className='userContainer'>
-                    <img src={BOY} alt="" />
+                    <img src={user} alt="" />
                     <p className='userName'> {name} <br /> {release}</p>
                     <div>
                         <button onClick={() => { clickHandler(props.item) }} className='userButton'>{time} <FontAwesomeIcon icon={faBookmark} /></button>
