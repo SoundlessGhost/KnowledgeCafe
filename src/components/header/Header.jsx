@@ -17,9 +17,6 @@ const Header = () => {
   };
   // AppearancePopUp_Function
   const [mode, setMode] = useState(false);
-  const underPopUpClickHandler = () => {
-    setMode(!mode);
-  };
   const toggleId = mode ? "dark" : "light";
   return (
     <div>
@@ -50,7 +47,12 @@ const Header = () => {
             <p>
               <FontAwesomeIcon icon={faEnvelope} /> Send Feedback
             </p>
-            <p onClick={underPopUpClickHandler} id={toggleId}>
+            <p
+              onClick={() => {
+                setMode(!mode);
+              }}
+              id={toggleId}
+            >
               <FontAwesomeIcon icon={faMoon} /> Appearance
             </p>
           </div>

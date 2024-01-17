@@ -1,11 +1,11 @@
 import './App.css'
 import Header from './components/header/Header'
-import News from './components/news/News'
+import Home from './components/home/Home'
 function App() {
 return (
   <div>
     <Header></Header>
-    <News></News>
+    <Home></Home>
   </div>
 )
 }
