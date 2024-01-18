@@ -16,6 +16,8 @@
 .userContainer {
     display: flex;
     align-items: center;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 
 .userContainer img {

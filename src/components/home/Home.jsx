@@ -2,7 +2,7 @@
 import React, {useState } from "react";
 import "./Home.css";
 import Cart from "../cart/cart";
-import ShowItem from "../showItem/ShowItem";
+import ShowItem from "../showItem/Showitem";
 import { items } from "../utilities/items";
 const Home = () => {
   const [cart, setCart] = useState([]);

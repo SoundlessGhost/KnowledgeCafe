@@ -3,6 +3,7 @@
     justify-content: space-between;
     background-color: #1C2B35;
     color: white;
+    height: 70px;
 }
 .headerTittle{
     margin-left:40px;
@@ -43,9 +44,11 @@
     background-color: rgb(67, 65, 65);
 }
 .popupContainer p{
+    margin-top: 14px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
+    animation-duration: 500ms;
 }
 .popupContainer p:hover{
     color: orange;

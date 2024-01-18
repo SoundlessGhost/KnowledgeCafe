@@ -17,6 +17,7 @@
     border-radius: 10px;
 }
 .cartSubTittle{
+    margin-top: 20px;
     height: 750px;
     border-radius: 10px;
     background-color: rgb(66, 66, 66);
@@ -30,6 +31,7 @@
 }
 .UserAbout{
     margin-left: 30px;
+    margin-top: 20px;
     font-style: italic;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
