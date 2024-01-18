@@ -1,19 +1,12 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import "./Home.css";
 import Cart from "../cart/cart";
-import ShowItem from "../showItem/Showitem";
-// import { toast } from "react-hot-toast";
+import ShowItem from "../showItem/ShowItem";
+import { items } from "../utilities/items";
 const Home = () => {
-  const [items, setItem] = useState([]);
-  useEffect(() => {
-    fetch("package.json")
-      .then((res) => res.json())
-      .then((data) => setItem(data));
-  }, []);
-
   const [cart, setCart] = useState([]);
-  const clickHandler = (item) => {
+  const HandlerAddCart = (item) => {
     const exist = cart.find((i) => i.id === item.id);
     if (exist) {
       alert("You Have Already Added");
@@ -32,7 +25,7 @@ const Home = () => {
       <div className="newsContainer">
         {items.map((item) => (
           <ShowItem
-            clickHandler={clickHandler}
+          HandlerAddCart={HandlerAddCart}
             item={item}
             key={item.id}
           ></ShowItem>

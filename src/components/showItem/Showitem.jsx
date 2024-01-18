@@ -3,7 +3,7 @@
 import "./ShowItem.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
-const ShowItem = ({ item, clickHandler }) => {
+const ShowItem = ({ item, HandlerAddCart }) => {
   const { picture, name, about, time, tag, release, site, user } = item;
   return (
     <div>
@@ -17,7 +17,7 @@ const ShowItem = ({ item, clickHandler }) => {
           <div>
             <button
               onClick={() => {
-                clickHandler(item);
+                HandlerAddCart(item);
               }}
               className="userButton"
             >
