@@ -1,0 +1,17 @@
+.postContainer {
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 10px;
+  height: 280px;
+}
+.postContainer p {
+  margin-top: 3px;
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+}
+.postContainer span {
+  padding: 5px;
+  font-family: "Courier New", Courier, monospace;
+  cursor: pointer;
+  font-weight: bolder;
+}

@@ -4,12 +4,13 @@ import "./Home.css";
 import Cart from "../cart/cart";
 import ShowItem from "../showItem/Showitem";
 import { items } from "../utilities/items";
+import toast from "react-hot-toast";
 const Home = () => {
   const [cart, setCart] = useState([]);
   const HandlerAddCart = (item) => {
     const exist = cart.find((i) => i.id === item.id);
     if (exist) {
-      alert("You Have Already Added");
+      toast("You Have Already Added .");
       return;
     }
     setCart([...cart, item]);

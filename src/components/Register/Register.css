@@ -1,0 +1,65 @@
+.registerContainer{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+.registerSubContainer{
+    border: 1px solid rgb(227, 227, 227);
+    margin-top: 100px;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    background-color: rgb(252, 252, 252);
+}
+.registerSubContainer input{
+    padding-left:10px;
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+    border-style: none;
+}
+.registerSubContainer button{
+    height: 40px;
+    width: 300px;
+    border-style: none;
+    border-radius: 10px;
+    background-color: rgb(208, 204, 241);
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.registerSubContainer p , .registerTittle{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-style: italic;
+}
+.imgContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.instagram,.facebook{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+.google{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.Eye{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 765px;
+    top: 380px;
+    cursor: pointer;
+}
+hr{
+    width: 200px;
+}

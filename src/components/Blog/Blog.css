@@ -1,0 +1,13 @@
+.PictureContainer{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 10px;
+}
+h4{
+    text-align: center;
+    margin: 10px 0px;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: large;
+}

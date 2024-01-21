@@ -9,6 +9,7 @@ import {
   faQuestion,
   faMoon,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 const Header = () => {
   // imgPopUp_Function
   const [condition, setCondition] = useState(false);
@@ -23,18 +24,18 @@ const Header = () => {
       <div className="headerContainer">
         <div className="headerTittle">
           <img onClick={popupClickHandler} src={profile} alt="" />
-          <h3>Knowledge World</h3>
+          <Link to="/home">Knowledge World</Link>
         </div>
         <div className="headerSubTittle">
-          <a href="#">Main</a>
-          <a href="#">Learn</a>
-          <a href="#">Blogs</a>
-          <a href="#">Login</a>
+          <Link to="/main">Main</Link>
+          <Link to="#">Learn</Link>
+          <Link to="/blog">Blogs</Link>
+          <Link to="/login">Login</Link>
         </div>
       </div>
-      <div className="Container">
+      <div className="Container duration-1000">
         {condition ? (
-          <div className="popupContainer">
+          <div className="popupContainer pl-5">
             <p>
               <FontAwesomeIcon icon={faSignOut} /> Sign Out
             </p>
