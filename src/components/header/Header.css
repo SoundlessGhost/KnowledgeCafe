@@ -22,12 +22,16 @@
   display: flex;
   align-items: center;
 }
-.headerSubTittle a {
+.headerSubTittle a ,.loginSty{
   text-decoration: none;
   color: white;
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
   margin-right: 50px;
+}
+.loginSty:hover{
+  color: orange;
+  cursor: pointer;
 }
 .headerTittle img {
   height: 45px;
@@ -36,7 +40,7 @@
   cursor: pointer;
 }
 .popupContainer {
-  border: 1px solid #555;
+  border: 1px solid rgb(221, 220, 220);
   height: 220px;
   width: 200px;
   position: absolute;
@@ -44,7 +48,7 @@
   left: 20px;
   padding: 10px;
   border-radius: 10px;
-  background-color: rgb(67, 65, 65);
+  background-color: rgb(251, 251, 251);
 }
 .popupContainer p {
   margin-top: 14px;
@@ -57,8 +61,19 @@
   color: orange;
 }
 #light {
-  color: white;
+  color: black;
 }
 #dark {
-  color: black;
+  color: rgb(255, 0, 0);
+}
+.loggedUserStyle{
+  text-align: center;
+}
+.loggedUserStyle p{
+  margin: 0px;
+  font-size: 14px;
+}
+.loggedUserStyle p:hover{
+  color: white;
+  cursor: ne-resize;
 }

@@ -1,74 +1,74 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Register.css'
-import eye from '../../assets/eye-low-vision-solid.svg';
-import { AuthContext } from '../Provider/AuthProvider';
-import { sendEmailVerification } from 'firebase/auth';
+import React, { useContext } from "react";
+import "./Register.css";
+import { Link } from "react-router-dom";
+import eye from "../../assets/eye-low-vision-solid.svg";
+import { userContext } from "../Provider/AuthProvider";
 
 const Register = () => {
-    // use auth
-    const { createUser } = useContext(AuthContext)
+  const { createUser } = useContext(userContext);
 
-    // some state 
-    const [error, setError] = useState('')
-    const [success, setSuccess] = useState('')
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        const form = event.target;
-        const email = form.email.value;
-        const password = form.password.value;
-        console.log(email, password);
+    createUser(email, password)
+      .then((r) => {
+        const loggedUser = r.user;
+        console.log(loggedUser);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
 
-        // validation 
-        setError('')
-        setSuccess('')
-
-        createUser(email, password)
-            .then(result => {
-                const currentUser = result.user;
-                form.reset();
-                console.log(currentUser);
-                sentVerification(currentUser)
-                return;
-            })
-            setSuccess('user register successful')
-            .catch(error => {
-                setError(error.message)
-            })
-    }
-    // Sent A Email Verification_Function
-    const sentVerification = (currentUser) => {
-        sendEmailVerification(currentUser)
-            .then(() => {
-                alert('Email verification sent!')
-            })
-    }
-
-    // Show & Hide Password_Function
-    const handleShowPassword = () => {
-        const password = document.getElementById('password')
-        password.type === "password" ? password.type = "text" : password.type = "password";
-    }
-    return (
-        <div className='registerContainer'>
-            <div className='registerSubContainer'>
-                <form onSubmit={handleSubmit}>
-                    <h2 className='registerTittle'>Register</h2>
-                    <input placeholder='Your Name' type="text" name="" id="" /><br /><br />
-                    <input placeholder='Your Email' type="email" name="" id="email" /><img onClick={handleShowPassword} className='Eye' src={eye} /><br /><br />
-                    <input placeholder='Your Password' type="password" name="" id="password" /><br /><br />
-                    <p><small>Already Have An Account? <Link to="/login">Login</Link></small></p>
-                    <button>Register</button><br />
-                </form>
-                <div>
-                    <p className='success'>{success}</p>
-                    <p className='error'>{error}</p>
-                </div>
-            </div>
+  // Show & Hide Password_Function
+  const handleShowPassword = () => {
+    const password = document.getElementById("password");
+    password.type === "password"
+      ? (password.type = "text")
+      : (password.type = "password");
+  };
+  return (
+    <div className="registerContainer">
+      <div className="registerSubContainer">
+        <form onSubmit={handleRegister}>
+          <h2 className="registerTittle">Register</h2>
+          <input placeholder="Your Name" type="text" name="name" id="" />
+          <br />
+          <input
+            placeholder="Your Email"
+            type="email"
+            name="email"
+            id="email"
+          />
+          <br />
+          <input
+            placeholder="Your Password"
+            type="password"
+            name="password"
+            id="password"
+          />
+          <img onClick={handleShowPassword} className="Eye" src={eye} />
+          <br />
+          <p>
+            <small>
+              Already Have An Account? <Link to="/login">Login</Link>
+            </small>
+          </p>
+          <button>Register</button>
+          <br />
+        </form>
+        <div>
+          <p className="success">{}</p>
+          <p className="error">{}</p>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Register;

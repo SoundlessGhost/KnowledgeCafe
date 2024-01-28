@@ -2,7 +2,7 @@
 import React, {useState } from "react";
 import "./Home.css";
 import Cart from "../cart/cart";
-import ShowItem from "../showItem/Showitem";
+import ShowItem from "../showItem/ShowItem";
 import { items } from "../utilities/items";
 import toast from "react-hot-toast";
 const Home = () => {
